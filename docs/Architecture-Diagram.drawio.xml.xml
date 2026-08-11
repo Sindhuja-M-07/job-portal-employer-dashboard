@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Job Portal - System Architecture" id="Vgt2Wbtw1DXZP5jShJ2Y">
+    <mxGraphModel dx="2060" dy="1012" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="FHKJdLpOqNmRMc1_FGvm-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D9EAF7;strokeColor=#1565C0;strokeWidth=3;fontSize=20;fontStyle=1;fontColor=#0D47A1;spacing=12;" value="USERS&#xa;&#xa;Admin&#xa;Employer&#xa;Job Seeker" vertex="1">
+          <mxGeometry height="160" width="470" x="455" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="FHKJdLpOqNmRMc1_FGvm-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DFF0D8;strokeColor=#2E7D32;strokeWidth=3;fontSize=18;fontStyle=1;fontColor=#1B5E20;spacing=12;" value="FRONTEND&#xa;&#xa;HTML + CSS + JavaScript&#xa;&#xa;Login / Registration&#xa;Job Search&#xa;Employer Dashboard&#xa;Job Seeker Dashboard&#xa;Admin Dashboard" vertex="1">
+          <mxGeometry height="260" width="530" x="425" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="FHKJdLpOqNmRMc1_FGvm-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0D5;strokeColor=#EF6C00;strokeWidth=3;fontSize=19;fontStyle=1;fontColor=#E65100;spacing=12;" value="REST API&#xa;&#xa;HTTP Requests / Responses" vertex="1">
+          <mxGeometry height="120" width="420" x="480" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="FHKJdLpOqNmRMc1_FGvm-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8DDF2;strokeColor=#7B1FA2;strokeWidth=3;fontSize=22;fontStyle=1;fontColor=#4A148C;spacing=12;" value="BACKEND&#xa;&#xa;SPRING BOOT" vertex="1">
+          <mxGeometry height="140" width="470" x="455" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="FHKJdLpOqNmRMc1_FGvm-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#5E35B1;strokeWidth=3;fontSize=17;fontStyle=1;fontColor=#311B92;spacing=12;" value="CONTROLLER LAYER&#xa;&#xa;Auth Controller&#xa;Job Controller&#xa;Application Controller&#xa;Employer Controller&#xa;Admin Controller" vertex="1">
+          <mxGeometry height="230" width="540" x="420" y="1210" as="geometry" />
+        </mxCell>
+        <mxCell id="FHKJdLpOqNmRMc1_FGvm-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#5E35B1;strokeWidth=3;fontSize=17;fontStyle=1;fontColor=#311B92;spacing=12;" value="SERVICE LAYER&#xa;&#xa;Auth Service&#xa;Job Service&#xa;Application Service&#xa;Employer Service&#xa;Admin Service" vertex="1">
+          <mxGeometry height="230" width="540" x="420" y="1520" as="geometry" />
+        </mxCell>
+        <mxCell id="FHKJdLpOqNmRMc1_FGvm-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3EAF5;strokeColor=#3949AB;strokeWidth=3;fontSize=17;fontStyle=1;fontColor=#1A237E;spacing=12;" value="REPOSITORY LAYER&#xa;&#xa;User Repository&#xa;Employer Repository&#xa;Job Repository&#xa;Application Repository" vertex="1">
+          <mxGeometry height="210" width="540" x="420" y="1830" as="geometry" />
+        </mxCell>
+        <mxCell id="FHKJdLpOqNmRMc1_FGvm-8" parent="1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#FFF8D8;strokeColor=#F9A825;strokeWidth=3;fontSize=18;fontStyle=1;fontColor=#F57F17;spacing=12;" value="DATABASE&#xa;&#xa;MYSQL&#xa;&#xa;Users&#xa;Employers&#xa;Job Seekers&#xa;Jobs&#xa;Applications" vertex="1">
+          <mxGeometry height="270" width="540" x="420" y="2120" as="geometry" />
+        </mxCell>
+        <mxCell id="FHKJdLpOqNmRMc1_FGvm-9" edge="1" parent="1" source="FHKJdLpOqNmRMc1_FGvm-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#455A64;strokeWidth=3;endArrow=block;endFill=1;fontSize=16;fontStyle=1;" target="FHKJdLpOqNmRMc1_FGvm-2" value="Uses">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FHKJdLpOqNmRMc1_FGvm-10" edge="1" parent="1" source="FHKJdLpOqNmRMc1_FGvm-2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#455A64;strokeWidth=3;endArrow=block;endFill=1;fontSize=16;fontStyle=1;" target="FHKJdLpOqNmRMc1_FGvm-3" value="Sends Requests">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FHKJdLpOqNmRMc1_FGvm-11" edge="1" parent="1" source="FHKJdLpOqNmRMc1_FGvm-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#455A64;strokeWidth=3;endArrow=block;endFill=1;fontSize=16;fontStyle=1;" target="FHKJdLpOqNmRMc1_FGvm-4" value="API Communication">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FHKJdLpOqNmRMc1_FGvm-12" edge="1" parent="1" source="FHKJdLpOqNmRMc1_FGvm-4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#455A64;strokeWidth=3;endArrow=block;endFill=1;fontSize=16;fontStyle=1;" target="FHKJdLpOqNmRMc1_FGvm-5" value="Routes Requests">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FHKJdLpOqNmRMc1_FGvm-13" edge="1" parent="1" source="FHKJdLpOqNmRMc1_FGvm-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#455A64;strokeWidth=3;endArrow=block;endFill=1;fontSize=16;fontStyle=1;" target="FHKJdLpOqNmRMc1_FGvm-6" value="Business Logic">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FHKJdLpOqNmRMc1_FGvm-14" edge="1" parent="1" source="FHKJdLpOqNmRMc1_FGvm-6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#455A64;strokeWidth=3;endArrow=block;endFill=1;fontSize=16;fontStyle=1;" target="FHKJdLpOqNmRMc1_FGvm-7" value="Data Access">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FHKJdLpOqNmRMc1_FGvm-15" edge="1" parent="1" source="FHKJdLpOqNmRMc1_FGvm-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#455A64;strokeWidth=3;endArrow=block;endFill=1;fontSize=16;fontStyle=1;" target="FHKJdLpOqNmRMc1_FGvm-8" value="Reads / Writes Data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
