@@ -43,3 +43,20 @@ job-portal-employer-dashboard/
 ├── LICENSE
 └── src/
 ```
+## Installation
+
+1. Clone the repository.
+2. Install dependencies using npm install.
+3. Configure environment variables.
+4. Start the application using npm start.
+
+## Future Enhancements
+
+- Add payment integration.
+- Improve user experience.
+- Add email notifications.
+- Enhance security features.
+
+## Author
+
+Job Portal with Employer Dashboard
