@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mxfile host="app.diagrams.net" modified="2026-11-04T12:00:00.000Z" agent="ChatGPT" version="24.7.17" type="device">
+  <diagram id="jobportalerd" name="Job Portal ER Diagram">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="e2" value="&lt;b&gt;USER&lt;/b&gt;&lt;hr/&gt;PK user_id&lt;br/&gt;full_name&lt;br/&gt;email (UNIQUE)&lt;br/&gt;password_hash&lt;br/&gt;phone&lt;br/&gt;role&lt;br/&gt;created_at" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="60" y="70" width="250" height="203" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="&lt;b&gt;JOB_SEEKER_PROFILE&lt;/b&gt;&lt;hr/&gt;PK profile_id&lt;br/&gt;FK user_id (UNIQUE)&lt;br/&gt;skills&lt;br/&gt;experience_years&lt;br/&gt;education&lt;br/&gt;location&lt;br/&gt;resume_url" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="390" y="50" width="250" height="203" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" value="&lt;b&gt;EMPLOYER&lt;/b&gt;&lt;hr/&gt;PK employer_id&lt;br/&gt;FK user_id (UNIQUE)&lt;br/&gt;FK company_id&lt;br/&gt;job_title&lt;br/&gt;created_at" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="60" y="390" width="250" height="157" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" value="&lt;b&gt;COMPANY&lt;/b&gt;&lt;hr/&gt;PK company_id&lt;br/&gt;company_name&lt;br/&gt;description&lt;br/&gt;website&lt;br/&gt;location&lt;br/&gt;logo_url" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="390" y="390" width="250" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" value="&lt;b&gt;JOB&lt;/b&gt;&lt;hr/&gt;PK job_id&lt;br/&gt;FK employer_id&lt;br/&gt;title&lt;br/&gt;description&lt;br/&gt;location&lt;br/&gt;job_type&lt;br/&gt;salary&lt;br/&gt;status&lt;br/&gt;posted_at" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="760" y="390" width="250" height="249" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" value="&lt;b&gt;APPLICATION&lt;/b&gt;&lt;hr/&gt;PK application_id&lt;br/&gt;FK job_id&lt;br/&gt;FK user_id&lt;br/&gt;FK resume_id&lt;br/&gt;cover_letter&lt;br/&gt;status&lt;br/&gt;applied_at" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="390" width="250" height="203" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8" value="&lt;b&gt;RESUME&lt;/b&gt;&lt;hr/&gt;PK resume_id&lt;br/&gt;FK user_id&lt;br/&gt;file_url&lt;br/&gt;file_name&lt;br/&gt;uploaded_at" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="760" y="70" width="250" height="157" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9" value="&lt;b&gt;SAVED_JOB&lt;/b&gt;&lt;hr/&gt;PK saved_job_id&lt;br/&gt;FK user_id&lt;br/&gt;FK job_id&lt;br/&gt;saved_at&lt;br/&gt;UNIQUE(user_id, job_id)" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="70" width="250" height="157" as="geometry"/>
+        </mxCell>
+        <mxCell id="r20" value="1 : 0..1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="e2" target="e3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r21" value="1 : 0..1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="e2" target="e8">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r22" value="1 : many" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="e5" target="e4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r23" value="1 : many" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="e4" target="e6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r24" value="1 : many" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="e2" target="e9">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r25" value="1 : many" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="e2" target="e7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r26" value="1 : many" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="e6" target="e7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r27" value="1 : many" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="e2" target="e10">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r28" value="1 : many" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="e6" target="e10">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="title" value="JOB PORTAL WITH EMPLOYER DASHBOARD — ER DIAGRAM" style="text;html=1;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="5" width="900" height="40" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
